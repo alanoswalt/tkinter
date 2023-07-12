@@ -18,6 +18,7 @@ def calculate(sign):
     if sign == '+':
         result = num1+num2
 
+operation = ''
 
 def button_click(button):
     #textbox.delete(0, END)
@@ -31,6 +32,20 @@ def button_click(button):
 def button_clear():
     #textbox.delete(0, END)
     textbox.delete(0, END)
+
+def button_add():
+    first_number=textbox.get()
+    global f_num
+    f_num = int(first_number)
+    textbox.delete(0, END)
+
+
+def button_equal():
+    first_number=f_num
+    second_number=int(textbox.get())
+    textbox.delete(0, END)
+    result = first_number+second_number
+    textbox.insert(0,result)
 
 
 
@@ -48,8 +63,8 @@ button3=Button(root, text="3", padx=20, pady=20, command=lambda: button_click(3)
 button2=Button(root, text="2", padx=20, pady=20, command=lambda: button_click(2))
 button1=Button(root, text="1", padx=20, pady=20, command=lambda: button_click(1))
 button0=Button(root, text="0", padx=20, pady=20, command=lambda: button_click(0))
-buttonEq=Button(root, text="=", padx=20, pady=20, command=lambda: button_click('='))
-buttonPlus=Button(root, text="+", padx=20, pady=20, command=lambda: button_click('+'))
+buttonEq=Button(root, text="=", padx=20, pady=20, command=lambda: button_equal())
+buttonPlus=Button(root, text="+", padx=20, pady=20, command=lambda: button_add())
 ButtonMinus=Button(root, text="-", padx=20, pady=20, command=lambda: button_click('-'))
 buttonDiv=Button(root, text="/", padx=20, pady=20, command=lambda: button_click('/'))
 buttonMult=Button(root, text="*", padx=20, pady=20, command=lambda: button_click('*'))
