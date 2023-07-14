@@ -1,4 +1,5 @@
 #Calculator Version 1.0
+#python -m PyInstaller myscript.py
 from tkinter import *
 
 
