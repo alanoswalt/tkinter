@@ -2,8 +2,6 @@
 #python -m PyInstaller myscript.py
 from tkinter import *
 
-
-
 class operations_Calculator:
 
     def __init__(self):
@@ -82,6 +80,5 @@ class operations_Calculator:
         if self.operation == '/':
             result = first_number/second_number
         self.textbox.insert(0,result)
-
 
 calculator=operations_Calculator()
