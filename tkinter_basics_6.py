@@ -21,6 +21,7 @@ def open():
     myImageLabel=Label(image=my_image).pack()
 
 
+
 bu=Button(root, text='Open file', command=open).pack()
 
 #Open different windows
