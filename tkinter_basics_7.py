@@ -15,6 +15,7 @@ def slider(num):
 #Creating s slider
 vertical = Scale(root, from_=0, to=100) # is not good to pack it in the same line, this has to happend in different line
 horizontal = Scale(root, from_=0, to=100, orient=HORIZONTAL)
+
 button = Button(root, text="Save num", command=lambda: slider(horizontal.get())).pack()
 
 
